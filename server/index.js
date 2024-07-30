@@ -8,7 +8,7 @@ import morgan from "morgan";
 import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
-import salesRoutes from "./routes/sales.js";
+import salesRoutes from "./routes/sales.js"; 
 
 // data imports
 import User from "./models/User.js";
@@ -17,15 +17,15 @@ import ProductStat from "./models/ProductStat.js";
 import Transaction from "./models/Transaction.js";
 import OverallStat from "./models/OverallStat.js";
 import AffiliateStat from "./models/AffiliateStat.js";
-// import {
-//   dataUser,
-//   dataProduct,
-//   dataProductStat,
-//   dataTransaction,
-//   dataOverallStat,
-//   dataAffiliateStat,
-// } from "./data/index.js";
-
+import {
+  dataUser,
+  dataProduct,
+  dataProductStat,
+  dataTransaction,
+  dataOverallStat,
+  dataAffiliateStat,
+} from "./data/index.js";
+ 
 /* CONFIGURATION */
 dotenv.config();
 const app = express();
@@ -56,9 +56,9 @@ mongoose
     /* ONLY ADD DATA ONE TIME */
     // AffiliateStat.insertMany(dataAffiliateStat);
     // OverallStat.insertMany(dataOverallStat);
-    Product.insertMany(dataProduct);
+    // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
-     User.insertMany(dataUser);
+    // User.insertMany(dataUser);
   })
   .catch((error) => console.log(`${error} did not connect`));

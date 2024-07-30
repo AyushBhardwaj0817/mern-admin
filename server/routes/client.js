@@ -15,5 +15,5 @@ router.get("/geography", getGeography);
 
 export default router;
 
-// http://localhost:5001/client/asfdgdfhgfj
+// http://localhost:5001/client/
 
